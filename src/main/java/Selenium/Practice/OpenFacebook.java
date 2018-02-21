@@ -5,21 +5,21 @@ import java.util.concurrent.TimeUnit;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
-import org.openqa.selenium.htmlunit.HtmlUnitDriver;
+import org.openqa.selenium.safari.SafariDriver;
 import org.testng.annotations.Test;
 
-public class NewTest {
-  @Test
-  public void f() throws InterruptedException {
-	  System.out.println("hiiiii");
 
-	   // WebDriver driver= new HtmlUnitDriver();
+public class OpenFacebook {
+
+	@Test
+	public void google() throws InterruptedException{
+	
+		
 		//WebDriver driver = new SafariDriver();
-	    System.setProperty("webdriver.chrome.driver", "/Users/rdatla/Downloads/chromedriver 2"); // path of chromedriver 
+		System.setProperty("webdriver.chrome.driver", "/Users/rdatla/Downloads/chromedriver 2");
 		WebDriver driver = new ChromeDriver();
 		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 		driver.navigate().to("https://www.facebook.com/");
-		Thread.sleep(10000);
 		driver.findElement(By.name("email")).sendKeys("7416783307");
 		driver.findElement(By.name("pass")).sendKeys("123456");
 		driver.findElement(By.id("loginbutton")).click();
@@ -27,9 +27,8 @@ public class NewTest {
 		System.out.println("Control entered here...");
 		System.out.println("Title of the Searched Page===="+driver.getTitle());
 		Thread.sleep(3000);
-		Thread.sleep(2000);
-		//driver.quit();//ogt it
-		driver.close();//it is
-		//added comment
-  }
+		//driver.quit();
+		driver.close();
+	}
+	
 }
