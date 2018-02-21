@@ -11,7 +11,7 @@ import org.testng.annotations.Test;
 public class NewTest {
   @Test
   public void f() throws InterruptedException {
-	  System.out.println("hiiii");
+	  System.out.println("hiiiii");
 
 	   // WebDriver driver= new HtmlUnitDriver();
 		//WebDriver driver = new SafariDriver();
